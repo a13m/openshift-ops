@@ -9,6 +9,7 @@
 - name: Update atomic-openshift-node
   yum:
     name: "{{ rpm_wanted }}"
+    disablerepo: rhel-7-libra-candidate
     state: present
   when: "{{ update_needed == True }}" 
 
